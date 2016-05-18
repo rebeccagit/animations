@@ -7,10 +7,8 @@
 		<style>
 			body {
 				background:#000;
-				color:#fff;
 				padding:0;
 				margin:0;
-				font-weight: bold;
 				overflow:hidden;
 			}
 			
@@ -48,6 +46,7 @@
 				controls.rollSpeed = Math.PI / 10;
 				
 				scene = new THREE.Scene();
+			
 				scene.fog = new THREE.Fog( 0x000000, 1, 15000 );
 				scene.autoUpdate = false;
 				

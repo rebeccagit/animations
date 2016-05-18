@@ -39,6 +39,7 @@
 				camera.position.z = 2750;
 				
 				scene = new THREE.Scene();
+				
 				scene.fog = new THREE.Fog( 0x0E0112, 2000, 3500 );
 				
 				scene.add( new THREE.AmbientLight( 0xdddddd, 1 ) );
@@ -64,6 +65,8 @@
 				var pC = new THREE.Vector3();
 				var cb = new THREE.Vector3();
 				var ab = new THREE.Vector3();
+				
+				
 				for ( var i = 0; i < positions.length; i += 9 ) {
 				
 					// positions

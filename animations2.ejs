@@ -5,7 +5,10 @@
 		<title>Animation 2 practice - three.js webgl - io blender - vertex colors</title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		
-
+		<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+		
+        <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 		
 		<style>
 			body { margin: 0; padding: 0; background-color: #000000;}
@@ -15,13 +18,14 @@
 	</head>
 	<body>
 		
+		<% include ../partials/nav.ejs %>
 		
 		<div id="container"></div>
 	
 
-		<script src="threejs/three.js"></script>
-		<script src="threejs/Detector.js"></script>
-		<script src="threejs/stats.min.js"></script>
+		<script src="myscripts/threejs/three.js"></script>
+		<script src="myscripts/threejs/Detector.js"></script>
+		<script src="myscripts/threejs/stats.min.js"></script>
 
 		<script>
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();

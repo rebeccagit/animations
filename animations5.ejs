@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>WIP! three.js webgl - level-of-details</title>
+		<title>three.js webgl - level-of-details</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -17,17 +17,16 @@
 
 	<body>
 
-		<script src="threejs/three.js"></script>
-		<script src="threejs/Detector.js"></script>
-		<script src="threejs/stats.min.js"></script>
-		
-		<script src="threejs/FlyControls.js"></script>
+		<script src="myscripts/threejs/three.js"></script>
+		<script src="myscripts/threejs/Detector.js"></script>
+		<script src="myscripts/threejs/FlyControls.js"></script>
 
 
 		<script>
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 			
-			var container, stats;
+			var container;
+			//var stats;
 			var camera, scene, renderer;
 			var geometry, objects;
 			var controls, clock = new THREE.Clock();
@@ -46,7 +45,6 @@
 				controls.rollSpeed = Math.PI / 10;
 				
 				scene = new THREE.Scene();
-			
 				scene.fog = new THREE.Fog( 0x000000, 1, 15000 );
 				scene.autoUpdate = false;
 				

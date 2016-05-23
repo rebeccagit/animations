@@ -23,3 +23,6 @@ animations5.ejs   =>  https://secure-inlet-7727.herokuapp.com/animations5
                   
 animations6.ejs   =>  https://secure-inlet-7727.herokuapp.com/animations6    
                   --- Inspired by =>  http://threejs.org/examples/#webgl_geometries
+				  
+animations7.ejs   =>  https://secure-inlet-7727.herokuapp.com/animations7
+				  --- Inspired by =>  http://threejs.org/examples/#webgl_points_random

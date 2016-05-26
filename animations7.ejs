@@ -2,23 +2,51 @@
 <html lang="en">
 	<head>
 		<title>Star Background - three.js webgl - particles</title>
+		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		
 		<style>
 			body {
 				background-color: #000000;
 				margin: 0px;
 				overflow: hidden;
+				text:#fff;
 			}
 
+			
+			#intro {
+				position: absolute;
+				top: 0px; width: 100%;
+				padding: 5px;
+				z-index: 100;
+			}
+			
+			p {
+			margin:5%;
+			color:#fff;
+			font-family:Tahoma;
+			font-weight:bold;
+			font-size:1.5em;
+			}
+			
 		</style>
 	</head>
-	<body>
+	<body>  
 
+	
+	
+			<div id="intro">
+			<p>If you cannot see this text, please be so kind as to advise me.</p>
+			<p>If you were in space travelling faster than the speed of light, this might be what you would see through your window!</p>
+			</div>
+	
+	
 		<script src="myscripts/threejs/three.js"></script>
 		<script src="myscripts/threejs/Detector.js"></script>
 		<script src="myscripts/threejs/stats.min.js"></script>
 
+		
 		<script>
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 			

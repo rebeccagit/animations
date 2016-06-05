@@ -26,3 +26,6 @@ animations6.ejs   =>  https://secure-inlet-7727.herokuapp.com/animations6
 				  
 animations7.ejs   =>  https://secure-inlet-7727.herokuapp.com/animations7
 				  --- Inspired by =>  http://threejs.org/examples/#webgl_points_random
+				  
+animations8.ejs   =>  https://secure-inlet-7727.herokuapp.com/animations7
+				  --- Inspired by all of the above and my interest in astronomy

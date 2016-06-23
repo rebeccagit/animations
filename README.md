@@ -3,6 +3,8 @@ Animations using Three.js and WebGL
 
 These are some animations I've been working on to learn three.js.  It's mostly JavaScript.  
 
+I've left some extra code in so you can alter as you like.
+
 **The order that you add three.js libraries/modules to the index page is important.
 **You'll need a server set up for the files to work.  I'm using Node.js.
 

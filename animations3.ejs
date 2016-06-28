@@ -12,6 +12,19 @@
 			}
 
 		</style>
+		
+		
+		
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-33109920-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 	</head>
 	
 	<body>
@@ -19,13 +32,12 @@
 		<div id="container"></div>
 		
 		
-		<script src="threejs/three.js"></script>
-		<script src="threejs/Detector.js"></script>
+		<script src="myscripts/threejs/three.js"></script>
+		<script src="myscripts/threejs/Detector.js"></script>
 
 		<script>
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 			var container;
-			//var stats;
 			var camera, scene, renderer;
 			var raycaster, mouse;
 			var mesh, line;
@@ -157,7 +169,6 @@
 				scene.add( line );
 				
 				
-				
 				renderer = new THREE.WebGLRenderer( { antialias: false } );
 				renderer.setClearColor( scene.fog.color );
 				renderer.setPixelRatio( window.devicePixelRatio );
@@ -165,16 +176,9 @@
 				container.appendChild( renderer.domElement );
 				
 				
-				
-				//stats = new Stats();
-				//container.appendChild( stats.dom );
-				
-				
-				
 				window.addEventListener( 'resize', onWindowResize, false );
 				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 			}
-			
 			
 			
 			function onWindowResize() {
@@ -182,7 +186,6 @@
 				camera.updateProjectionMatrix();
 				renderer.setSize( window.innerWidth, window.innerHeight );
 			}
-			
 			
 		
 			function onDocumentMouseMove( event ) {
@@ -192,13 +195,10 @@
 			}
 			
 			
-			
 			function animate() {
 				requestAnimationFrame( animate );
 				render();
-				//stats.update();
 			}
-			
 			
 			
 			function render() {

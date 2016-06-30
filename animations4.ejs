@@ -12,14 +12,24 @@
 			}
 		</style>
 		
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-33109920-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 
 	</head>
 	<body>
 
 		<script src="myscripts/threejs/three.js"></script>
+
 		<script src="myscripts/threejs/Detector.js"></script>
-
-
 
 		<script>
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
@@ -42,35 +52,34 @@
 
 				var light, object;
 
-				scene.add( new THREE.AmbientLight( 0xaaaaaa ) );
+				scene.add( new THREE.AmbientLight( 0x404040 ) );
 
-				light = new THREE.DirectionalLight( 0xd9b38c );
-				light.position.set( 1, 0, 0 );
+				light = new THREE.DirectionalLight( 0xffffff );
+				light.position.set( 0, 1, 0 );
 				scene.add( light );
 
-				
-				var map = new THREE.TextureLoader().load( 'images/cutey.jpg' );
+				var map = new THREE.TextureLoader().load( 'images/UV_Grid_Sm.jpg' );
 				map.wrapS = map.wrapT = THREE.RepeatWrapping;
 				map.anisotropy = 16;
 				var material = new THREE.MeshLambertMaterial( { map: map, side: THREE.DoubleSide } );
 
-
-				object = new THREE.Mesh( new THREE.BoxGeometry( 250, 250, 250, 4, 4, 4 ), material );
+				
+				object = new THREE.Mesh( new THREE.BoxGeometry( 200, 200, 200, 4, 4, 4 ), material );
 				object.position.set( -200, 0, 0 );
 				scene.add( object );
 
-				
-				object = new THREE.Mesh( new THREE.TorusKnotGeometry( 400, 100, 500, 120 ), material );
+
+				object = new THREE.Mesh( new THREE.TorusKnotGeometry( 200, 10, 500, 120 ), material );
 				object.position.set( 0, 0, -200 );
 				scene.add( object );
-	
+
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setClearColor( scene.fog.color );
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
-				
+
 
 				window.addEventListener( 'resize', onWindowResize, false );
 			}
@@ -91,13 +100,12 @@
 				camera.lookAt( scene.position );
 				for ( var i = 0, l = scene.children.length; i < l; i ++ ) {
 					var object = scene.children[ i ];
-					object.rotation.x = timer * 10;
+					object.rotation.x = timer * 5;
 					object.rotation.y = timer * 2.5;
 				}
+				
 				renderer.render( scene, camera );
-
 			}
-			
 			
 			function animate() {
 				requestAnimationFrame( animate );

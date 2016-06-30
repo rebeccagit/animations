@@ -5,7 +5,7 @@ These are some animations I've been working on to learn three.js.  It's mostly J
 
 I've left some extra code in so you can alter as you like.
 
-I've put the init() and animate() function calls at the bottom instead of at the top like most of the three.js examples.  Why?  Because browsers start executing the code as soon as it's downloaded, and browsers download from top to bottom.  Seems like a waste of time to have init() and animate() at the top trying to execute when the actual functions have yet to be downloaded.  Or, maybe, there's a reason that's done, but I haven't found it yet? You can also do this another way with window.onload, right?  I don't know because I haven't tried it.  
+I've put the init() and animate() function calls at the bottom instead of at the top like most of the three.js examples.  Why?  Because browsers start executing the code as soon as it's downloaded, and browsers download from top to bottom.  Seems like a waste of time to have init() and animate() at the top trying to execute when the actual functions have yet to be downloaded.  Or, maybe, there's a reason that's done, but I haven't found it yet? You can also do this another way with window.onload, right?  Seems to help w/ jankiness I was having with animations 4 and 6.  
 
 **The order that you add three.js libraries/modules to the index page is important.
 **You'll need a server set up for the files to work.  I'm using Node.js.
